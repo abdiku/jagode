@@ -1,20 +1,59 @@
 <!-- Start Pasang CSS Load YouTube Modiv -->
-<![CDATA[
-/*! lazyload-youtube.css */
-.youtube-lazyload, .youtube-lazyload .play-button, .youtube-lazyload img {cursor: pointer;}
-.youtube-lazyload {background-color: #000; margin-bottom: 20px; position: relative; padding-top: 56.25%; overflow: hidden;}
-.youtube-lazyload img {width: 100%; position: absolute; top: 0; left: 0;}
-.youtube-lazyload .play-button {width: 100px; height: 60px; background-color: #282828; z-index: 1; border-radius: 9px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
-.youtube-lazyload .play-button:before {content: ""; border-style: solid; border-width: 15px 0 15px 28px; border-color: transparent transparent transparent #fff; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
-.youtube-lazyload .play-button:hover {background-color: red;}
-.youtube-lazyload iframe {height: 100%; width: 100%; position: absolute; top: 0; left: 0;}
-<![CDATA[
-/*! embed-video-responsive.css */
+<!-- Start Pasang CSS LazyLoad YouTube modiv -->
+<style>
+/*! llyv.css v0.1.0 */
+.llyv, .llyv .llyv-play-btn, .llyv img { cursor: pointer }
+.llyv {
+  background-color: #000;
+  margin-bottom: 20px;
+  position: relative;
+  padding-top: 56.25%; /* 16:9 ratio */
+  overflow: hidden;
+}
+.llyv img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.llyv .llyv-play-btn {
+  width: 100px;
+  height: 60px;
+  background-color: #282828;
+  z-index: 1;
+  border-radius: 9px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+.llyv .llyv-play-btn::before {
+  content: "";
+  position: absolute;
+  left: 36px;
+  top: 15px;
+  border-style: solid;
+  border-width: 15px 0 13px 28px;
+  border-color: transparent transparent transparent #fff;
+}
+.llyv iframe {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border: 0;
+}
+</style>
+<style>
 .video-responsive {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
+  margin: 0;
   width: 100%;
 }
 .video-responsive iframe {
@@ -25,37 +64,6 @@
   height: 100%;
   border: 0;
 }
-<![CDATA[
-/*! embed-video-responsive.css */
-.video-responsive {
-  position: relative;
-  padding-bottom: 56.25%; /* Rasio 16:9 */
-  height: 0;
-  overflow: hidden;
-  width: 100%;
-  margin-bottom: 20px;
-}
-.video-responsive iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-.youtube-thumb {
-      display:none;
-      visibility:hidden;
-}
-.hidden-image {
-    opacity: 0; /* Gambar menjadi transparan */
-    position: absolute; /* Pindahkan dari posisi tata letak utama */
-    left: -9999px; /* Tempatkan di luar layar */
-    height: 0; /* Pastikan tidak mengambil ruang di tata letak */
-    width: 0; /* Pastikan tidak mengambil ruang di tata letak */
-    display: none; /* Sembunyikan elemen sepenuhnya */
-  }
-.hidden-image {
-    display: none; /* Gambar tidak akan muncul secara visual */
-  }
+</style>
+<!-- End Pasang CSS LazyLoad YouTube modiv -->
 <!-- End Pasang CSSLazy Load YouTube Modiv -->
